@@ -16,7 +16,6 @@ export const SendBox = ({ OnMessageSend }: SendBoxProps) => {
     <div>
       <textarea onChange={OnChange}></textarea>
       <button onClick={OnClick}>SEND</button>
-      <p></p>
     </div>
   );
 };
