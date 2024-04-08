@@ -14,7 +14,6 @@ function App() {
   return (
     <div>
       <Chat />
-      <SendBox OnMessageSend={OnSent} />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Chat from "../Chat";
 interface SendBoxProps {
   OnMessageSend: (message: string) => void;
 }
