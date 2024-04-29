@@ -6,10 +6,37 @@ import { SendBox } from "./components/SendBox";
 import Chat from "./Chat";
 
 function App() {
-  const [count, setCount] = useState(0);
-  function OnSent(message: string) {
-    console.log(message);
-  }
+  const [name, setName] = useState("");
+  let [isLogged, setIsLogged] = useState(false);
+
+  return (
+    <div>
+      {isLogged ? (
+        <div>
+          <Chat username={name} />
+        </div>
+      ) : (
+        <div>
+          <label>
+            Enter your name:
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
+
+          <button
+            onClick={() => {
+              setIsLogged(true);
+            }}
+          >
+            Send name
+          </button>
+        </div>
+      )}
+    </div>
+  );
 
   return (
     <div>
