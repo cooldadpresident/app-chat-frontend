@@ -1,8 +1,18 @@
+/*
+Necessary dependencies 
+useWebSocket and ReadyState which provides WebSocket hook for react 
+Sendbox component 
+React and its hooks useState etc from react library
+*/
 import useWebSocket, { ReadyState } from "react-use-websocket";
 import { SendBox } from "./components/SendBox";
 import React, { useState, useCallback, useEffect } from "react";
 
+
+// defining the chat component, receives props which includes username
 const Chat = (props) => {
+  // setting up WebSocket connection using the useWebSocket
+  // 
   const { sendMessage, lastMessage, readyState } = useWebSocket(
     "ws://localhost:8400"
   );
